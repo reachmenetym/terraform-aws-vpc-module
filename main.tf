@@ -30,6 +30,11 @@ resource "aws_subnet" "my_private_subnet" {
     tags = var.tag_names
 }
 
+
+output "vpc_id" {
+  value = aws_vpc.myvpc.id
+}
+
 # data "aws_vpc" "myvpc" {
 #   id = aws_vpc.myvpc.id
 # }
